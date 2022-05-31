@@ -7,7 +7,7 @@ use App\Menus;
 use App\sousmenu;
 use App\Action;
 use APP\Profils;
-use APP\Permission;
+use App\Permission;
 use Auth;
 
 class HomeController extends Controller
@@ -33,7 +33,8 @@ class HomeController extends Controller
 
         $menus = Menus::where('statut', '=', 'OK')->get();
         $actions = Action::where('actions.statut', '=', 'OK')->leftJoin("permissions","permissions.action_id","actions.id")->get();
+        $permissions = Permission::where('permissions.statut', '=', 'OK')->rightJoin("actions","actions.id","permissions.action_id")->get();
 
-        return view('home')->with('menus', $menus)->with('actions', $actions);
+        return view('home')->with('menus', $menus)->with('actions', $actions)->with('permissions', $permissions);
     }
 }

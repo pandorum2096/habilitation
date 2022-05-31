@@ -12,27 +12,21 @@
                             <h6 class="card-title m-b-20">Module Access</h6>
                             <div class="table-responsive">
                                 <table class="table table-striped table-responsive custom-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Module Permission</th>
-                                            @foreach ($actions as $action)
-                                            <th class="text-center">{{$action->libelle}}</th>
-                                            @endforeach
-                                        </tr>
-                                    </thead>
                                     <tbody>
                                         @foreach ($menus as $menu)
                                         <tr id="{{$menu->id}}">
                                             <td>{{$menu->libelle}}</td>
-                                            @foreach ($actions as $action)
                                             <td class="text-center">
-                                                @if($action->libelle=="voir")
-                                                    <input onclick="actived(this)" @if($action->action_id != null && $action->menu_id != $menu->id) checked @endif class="voir" name="{{$menu->id.'|'.$action->id}}" type="checkbox">
-                                                @else
-                                                    <input @if($action->action_id != null && $action->menu_id != $menu->id) checked @endif name="{{$menu->id.'|'.$action->id}}" @if($action->action_id == null && $action->menu_id == null) disabled @endif type="checkbox">
+                                            @foreach ($actions as $action)
+                                                @if($action->menu_id==$menu->id || $action->menu_id==null)
+                                                    @if($action->libelle=="voir")
+                                                        <input onclick="actived(this)" @if($action->action_id != null && $action->menu_id != $menu->id) checked @endif class="voir" name="{{$menu->id.'|'.$action->id}}" type="checkbox"> {{$action->libelle}}
+                                                    @else
+                                                        <input @if($action->action_id != null && $action->menu_id != $menu->id) checked @endif name="{{$menu->id.'|'.$action->id}}" @if($action->action_id == null && $action->menu_id == null) disabled @endif type="checkbox"> {{$action->libelle}}
+                                                    @endif
                                                 @endif
-                                            </td>
                                             @endforeach
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
