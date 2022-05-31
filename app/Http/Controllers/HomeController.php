@@ -32,7 +32,10 @@ class HomeController extends Controller
         $auth = Auth::user()->profil;
 
         $menus = Menus::where('statut', '=', 'OK')->get();
-        $actions = Action::where('actions.statut', '=', 'OK')->leftJoin("permissions","permissions.action_id","actions.id")->get();
+        if($auth != 1)
+            $actions = Action::where('actions.statut', '=', 'OK')->leftJoin("permissions","permissions.action_id","actions.id")->where("permissions.profil_id","=",1)->get();
+        else
+            $actions = Action::where('actions.statut', '=', 'OK')->leftJoin("permissions","permissions.action_id","actions.id")->get();
         $permissions = Permission::where('permissions.statut', '=', 'OK')->rightJoin("actions","actions.id","permissions.action_id")->get();
 
         return view('home')->with('menus', $menus)->with('actions', $actions)->with('permissions', $permissions);

@@ -20,9 +20,9 @@
                                             @foreach ($actions as $action)
                                                 @if($action->menu_id==$menu->id || $action->menu_id==null)
                                                     @if($action->libelle=="voir")
-                                                        <input onclick="actived(this)"  @if($action->action_id != null && $action->menu_id == $menu->id) checked @endif class="voir" name="{{$menu->id.'|'.$action->id}}" type="checkbox" /> {{$action->libelle}}
+                                                        <input onclick="actived(this)"  @if($action->action_id != null && $action->menu_id == $menu->id && $action->profil_id == Auth::user()->profil) checked @endif class="voir" name="{{$menu->id.'|'.$action->id}}" type="checkbox" /> {{$action->libelle}}
                                                     @else
-                                                        <input @if($action->action_id != null && $action->menu_id == $menu->id) checked @endif name="{{$menu->id.'|'.$action->id}}" @if($action->action_id == null && $action->menu_id == null) disabled @endif type="checkbox" /> {{$action->libelle}}
+                                                        <input @if($action->action_id != null && $action->menu_id == $menu->id && $action->profil_id == Auth::user()->profil) checked @endif name="{{$menu->id.'|'.$action->id}}" @if($action->action_id == null && $action->menu_id == null) disabled @endif type="checkbox" /> {{$action->libelle}}
                                                     @endif
                                                 @endif
                                             @endforeach
