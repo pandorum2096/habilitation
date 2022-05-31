@@ -29,7 +29,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $auth = Auth::user()->profil;
+        //$auth = Auth::user()->profil;
 
         $menus = Menus::where('statut', '=', 'OK')->get();
         if($auth != 1)
