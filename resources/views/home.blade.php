@@ -14,19 +14,15 @@
                                 <table class="table table-striped table-responsive custom-table">
                                     <tbody>
                                         @foreach ($menus as $menu)
-                                        <tr id="{{$menu->id}}">
+                                        <tr>
                                             <td>{{$menu->libelle}}</td>
-                                            <td class="text-center">
+                                            <td class="text-center" id="{{$menu->id}}">
                                             @foreach ($actions as $action)
                                                 @if($action->menu_id==$menu->id || $action->menu_id==null)
                                                     @if($action->libelle=="voir")
-                                                        <input onclick="actived(this)"
-                                                             @if($action->action_id != null && $action->menu_id == $menu->id)
-                                                                  checked
-                                                                @endif 
-                                                                class="voir" name="{{$menu->id.'|'.$action->id}}" type="checkbox" > {{$action->libelle}}
+                                                        <input onclick="actived(this)"  @if($action->action_id != null && $action->menu_id == $menu->id) checked @endif class="voir" name="{{$menu->id.'|'.$action->id}}" type="checkbox" /> {{$action->libelle}}
                                                     @else
-                                                        <input @if($action->action_id != null && $action->menu_id == $menu->id) checked @endif name="{{$menu->id.'|'.$action->id}}" @if($action->action_id == null && $action->menu_id == null) disabled @endif type="checkbox"> {{$action->libelle}}
+                                                        <input @if($action->action_id != null && $action->menu_id == $menu->id) checked @endif name="{{$menu->id.'|'.$action->id}}" @if($action->action_id == null && $action->menu_id == null) disabled @endif type="checkbox" /> {{$action->libelle}}
                                                     @endif
                                                 @endif
                                             @endforeach
@@ -111,17 +107,18 @@
 <script type="text/javascript">
     function actived(elt) {
         const men_id = elt.name.split('|')[0];
-        const old = document.querySelector("tr[id='" + men_id + "']");
+        const old = document.querySelector("td[id='" + men_id + "']");
+        console.log(old);
         if (elt.checked) {
             for (let i = 0; i < old.children.length; i++) {
-                old.children[i].firstChild.disabled = false;
-
+                console.log(old.children);
+                    old.children[i].disabled = false;
             }
         } else {
             for (let i = 0; i < old.children.length; i++) {
-                if (old.children[i].firstChild.className != "voir") {
-                    old.children[i].firstChild.disabled = true;
-                    old.children[i].firstChild.checked = false;
+                if (old.children[i].className != "voir") {
+                    old.children[i].disabled = true;
+                    old.children[i].checked = false;
                 }
             }
         }
