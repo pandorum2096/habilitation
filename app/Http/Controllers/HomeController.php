@@ -37,7 +37,7 @@ class HomeController extends Controller
         else
             $actions = Action::where('actions.statut', '=', 'OK')->leftJoin("permissions","permissions.action_id","actions.id")->selectRaw("actions.*,permissions.action_id,permissions.menu_id,permissions.profil_id")->get();
 
-
+        // dd($actions);
         return view('home')->with('menus', $menus)->with('actions', $actions);
     }
 
