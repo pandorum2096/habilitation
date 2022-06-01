@@ -11,26 +11,31 @@
                         <div class="col-sm-18 col-md-18 col-lg-8 col-xl-9">
                             <h6 class="card-title m-b-20">Module Access</h6>
                             <div class="table-responsive">
-                                <table class="table table-striped table-responsive custom-table">
-                                    <tbody>
-                                        @foreach ($menus as $menu)
-                                        <tr>
-                                            <td>{{$menu->libelle}}</td>
-                                            <td class="text-center" id="{{$menu->id}}">
-                                            @foreach ($actions as $action)
-                                                @if($action->menu_id==$menu->id || $action->menu_id==null)
-                                                    @if($action->libelle=="voir")
-                                                        <input onclick="actived(this)"  @if($action->action_id != null && $action->menu_id == $menu->id && $action->profil_id == Auth::user()->profil) checked @endif class="voir" name="{{$menu->id.'|'.$action->id}}" type="checkbox" /> {{$action->libelle}}
-                                                    @else
-                                                        <input @if($action->action_id != null && $action->menu_id == $menu->id && $action->profil_id == Auth::user()->profil) checked @endif name="{{$menu->id.'|'.$action->id}}" @if($action->action_id == null && $action->menu_id == null) disabled @endif type="checkbox" /> {{$action->libelle}}
-                                                    @endif
-                                                @endif
+                                <form action="{{route('home.store')}}" method="POST">
+                                    @csrf
+                                    <table class="table table-striped table-responsive custom-table">
+                                        <tbody>
+
+                                            @foreach ($menus as $menu)
+                                                <tr>
+                                                    <td>{{$menu->libelle}}</td>
+                                                    <td class="text-center" id="{{$menu->id}}">
+                                                        @foreach ($actions as $action)
+                                                            @if($action->menu_id==$menu->id || $action->menu_id==null)
+                                                                @if($action->libelle=="voir")
+                                                                        <input onclick="actived(this)" @if($action->action_id != null && $action->menu_id == $menu->id && $action->profil_id == Auth::user()->profil) checked @endif class="voir" name="{{$menu->id.'|'.$action->id}}" type="checkbox" /> {{$action->libelle}}
+                                                                @else
+                                                                        <input @if($action->action_id != null && $action->menu_id == $menu->id && $action->profil_id == Auth::user()->profil) checked @endif name="{{$menu->id.'|'.$action->id}}" @if($action->action_id == null && $action->menu_id == null) disabled @endif type="checkbox" /> {{$action->libelle}}
+                                                                @endif
+                                                            @endif
+                                                        @endforeach
+                                                    </td>
+                                                </tr>
                                             @endforeach
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                    <input type="submit" value="submit" />
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -105,14 +110,15 @@
 
 @section('script')
 <script type="text/javascript">
-    function actived(elt) {
+
+    function onload(elt){
         const men_id = elt.name.split('|')[0];
         const old = document.querySelector("td[id='" + men_id + "']");
         console.log(old);
         if (elt.checked) {
             for (let i = 0; i < old.children.length; i++) {
                 console.log(old.children);
-                    old.children[i].disabled = false;
+                old.children[i].disabled = false;
             }
         } else {
             for (let i = 0; i < old.children.length; i++) {
@@ -123,5 +129,16 @@
             }
         }
     }
+
+    function actived(elt) {
+        onload(elt);
+    }
+
+    const oldevoir = document.querySelectorAll("input[class='" + "voir" + "']:checked");
+    console.log("object", oldevoir);
+    for (let i = 0; i < oldevoir.length; i++) {
+                onload(oldevoir[i]);
+    }
+
 </script>
 @endsection
