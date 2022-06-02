@@ -9,6 +9,7 @@ use App\Action;
 use App\Profils;
 use App\Permission;
 use Auth;
+use DB;
 
 class HomeController extends Controller
 {
@@ -29,6 +30,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+
         return view('profil.index');
     }
 
@@ -42,9 +45,35 @@ class HomeController extends Controller
         return view("profil.store");
     }
 
-    public function edit()
+    public function edit($id=null)
     {
-        return view("profil.edit");
+        $profil = DB::table('profils')->find($id);
+
+        $actions=DB::table('actions')->orderBy('position')->get();
+        $all_menus=DB::table('menuses')->orderBy('position')->get();
+
+        $p_menus_actions=DB::table('permissions')->where('profil_id','=',$id)->get();
+
+        $p_menu_action_ids=[];
+        foreach($p_menus_actions as $act){
+            $p_menu_action_ids[]=[$act->menu_id,$act->action_id];
+        }
+        return view("profil.edit",compact('profil','actions','all_menus','p_menu_action_ids'));
+    }
+
+    public function update($id=null,Request $request){
+
+
+        $profil = DB::table('profils')->find($id);
+
+        DB::table('profils')
+            ->where('id', $profil->id)
+            ->update([
+                'code' => $request->code ?: $profil->code,
+                'libelle' => $request->libelle ?: $profil->libelle,
+            ]);
+
+        return redirect()->back();
     }
 
     public function achat()
