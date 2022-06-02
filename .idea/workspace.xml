@@ -20,19 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac75a148-b6ba-49c6-84f6-1c214d4ec05e" name="Default Changelist" comment="Merge branch 'main' of https://github.com/pandorum2096/habilitation&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/HomeController.php">
-      <change beforePath="$PROJECT_DIR$/.idea/habilitation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/habilitation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profil/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profil/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profil/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profil/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +163,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../xampp/htdocs/habilitation01062022" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -195,7 +185,7 @@
       <workItem from="1653907300114" duration="10171000" />
       <workItem from="1654181436542" duration="3065000" />
       <workItem from="1654184647371" duration="62000" />
-      <workItem from="1654184985661" duration="8302000" />
+      <workItem from="1654184985661" duration="10716000" />
     </task>
     <servers />
   </component>
@@ -245,6 +235,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="542" y="171" key="FileChooserDialogImpl" timestamp="1654195108168">
+      <screen x="0" y="0" width="1536" height="832" />
+    </state>
+    <state x="542" y="171" key="FileChooserDialogImpl/0.0.1536.832@0.0.1536.832" timestamp="1654195108168" />
     <state width="1537" height="220" key="GridCell.Tab.0.bottom" timestamp="1654184561975">
       <screen x="0" y="0" width="1536" height="832" />
     </state>

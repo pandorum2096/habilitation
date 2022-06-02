@@ -42,6 +42,7 @@
                 @foreach( $actions as $act)
                 <td class="text-center">
                     <input type="checkbox"
+                           name="{{$menu->id.'|'.$act->id}}"
                            @if(in_array(array($menu->id, $act->id), $p_menu_action_ids))
                                checked=""
                           @endif

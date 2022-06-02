@@ -66,12 +66,29 @@ class HomeController extends Controller
 
         $profil = DB::table('profils')->find($id);
 
-        DB::table('profils')
-            ->where('id', $profil->id)
-            ->update([
-                'code' => $request->code ?: $profil->code,
-                'libelle' => $request->libelle ?: $profil->libelle,
-            ]);
+        $actions=DB::table('actions')->orderBy('position')->get();
+        $all_menus=DB::table('menuses')->orderBy('position')->get();
+
+        $permissions = Permission::where("profil_id","=",$id)->get();
+        foreach ($permissions as $key => $permission) {
+            $permission->delete();
+        }
+
+        foreach ($all_menus as $m => $menu) {
+            foreach ($actions as $a => $action) {
+                 $check = Permission::where('permissions.menu_id', '=', $menu->id)->where('permissions.action_id', '=', $action->id)->where('permissions.profil_id', '=', $id)->get();
+                if($request->input($menu->id."|".$action->id) && count($check) == 0){
+                    $permission = new Permission();
+                    $permission->menu_id = $menu->id;
+                    $permission->action_id = $action->id;
+                    $permission->profil_id = $id;
+                    $permission->statut = 1;
+                    $permission->save();
+                }
+            }
+        }
+
+
 
         return redirect()->back();
     }
