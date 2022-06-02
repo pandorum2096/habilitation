@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
 Auth::routes();
 
 Route::get('/profil', 'ProfilsController@index')->name('profil.index');

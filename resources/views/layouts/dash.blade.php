@@ -1830,8 +1830,15 @@ id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader
 				<!--begin::Notifications-->
 				<div>
 					<!--begin::Item-->
-					<a  href="javascript:void(0);" onClick="javascript:onCloseApplication();return false;" title="{LIBELLE_TOOLBAR_FERMER}"
-                             class="btn btn-primary btn-txt btn-block account-btn ">{CST_DECONNEXION}</a>
+					<a class="btn btn-primary btn-txt btn-block account-btn " href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                    </a>
+					
+							 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                            </form>
 					<!--end::Item   font-weight-bolder py-2 px-5 w-12-->
 				</div>
 				<!--end::Notifications-->
