@@ -29,50 +29,33 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $auth = Auth::user()->profil;
+        
 
-        $menus = Menus::where('statut', '=', 'OK')->get();
-        if($auth != 1)
-            $actions = Action::where('actions.statut', '=', 'OK')->leftJoin("permissions","permissions.action_id","actions.id")->where("permissions.profil_id","=",1)->selectRaw("actions.id as idact,actions.*,permissions.action_id,permissions.menu_id,permissions.profil_id")->get();
-        else
-            $actions = Action::where('actions.statut', '=', 'OK')->leftJoin("permissions","permissions.action_id","actions.id")->selectRaw("actions.id as idact, actions.*,permissions.action_id,permissions.menu_id,permissions.profil_id")->get();
-
-        // dd($actions);
-        return view('home')->with('menus', $menus)->with('actions', $actions);
+        return view('profil.index');
     }
 
     public function store(Request $request)
+    { 
+        return view("profil.store");
+    }
+
+    public function create()
     {
-        // var_dump("1");
-        // dd($request->);
-        $menus = Menus::where('statut', '=', 'OK')->get();
-        $actions = Action::where('actions.statut', '=', 'OK')->get();
+        return view("profil.store");
+    }
 
-        
-        $permissions = Permission::where("profil_id","=",Auth::user()->profil)->get();
-        foreach ($permissions as $key => $permission) {
-            $permission->delete();
-        }
-        
-        
-        foreach ($menus as $m => $menu) {
-            foreach ($actions as $a => $action) {
-                 var_dump($request->input($menu->id."|".$action->id));
-                $check = Permission::where('permissions.menu_id', '=', $menu->id)->where('permissions.action_id', '=', $action->id)->where('permissions.profil_id', '=', Auth::user()->profil)->get();
-                // dd("menu:$menu->id, action:$action->id, exite:".isset($request[$menu->id.'|'.$action->id])." count($check)");
-                
-                if($request->input($menu->id."|".$action->id) && count($check) == 0){
-                    var_dump($check);
-                    $permission = new Permission();
-                    $permission->menu_id = $menu->id;
-                    $permission->action_id = $action->id;
-                    $permission->profil_id = Auth::user()->profil;
-                    $permission->statut = "OK";
-                    $permission->save();
-                }
-            }
-        }
+    public function edit()
+    {
+        return view("profil.edit");
+    }
 
-        return redirect("home");
+    public function achat()
+    {
+        return view("achat.index");
+    }
+
+    public function finance()
+    {
+        return view("finance.index");
     }
 }

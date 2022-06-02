@@ -15,26 +15,24 @@
 		
 	</SCRIPT>
 
-	<link href='include/style/style.css' type='text/css' rel='STYLESHEET' />
-	<link href='include/style/ecranprincipal.css' type='text/css' rel='STYLESHEET' />
-	<link href='include/style/menu_style_couleur.css' type='text/css' rel='STYLESHEET' />
-	<link href='include/style/{STYLE_THEME}.css' type='text/css' rel='STYLESHEET' />
+	<link href='{{asset("include/style/style.css")}}' type='text/css' rel='STYLESHEET' />
+	<link href='{{asset("include/style/ecranprincipal.css")}}' type='text/css' rel='STYLESHEET' />
+	<link href='{{asset("include/style/menu_style_couleur.css")}}' type='text/css' rel='STYLESHEET' />
+	<link rel="stylesheet" type="text/css" href="{{asset('core/css/style.css')}}">
 
-	<link rel="stylesheet" type="text/css" href="core/css/style.css">
+	<SCRIPT type='text/javascript' SRC='{{asset("configuration/constantes.js")}}'></SCRIPT>
+	<SCRIPT type='text/javascript' SRC='{{asset("include/script/toolbar.js")}}'></SCRIPT>
+	<script type='text/javascript' src="{{asset('include/script/menu_util.js')}}"></script>
+	<SCRIPT type='text/javascript'  SRC='{{asset("include/script/fonction_util.js")}}'></script>
+	<SCRIPT type='text/javascript' SRC='{{asset("include/script/hashtable.js")}}'></SCRIPT>
+	<SCRIPT type='text/javascript' SRC='{{asset("include/script/fct_parent_menu.js")}}'></SCRIPT>
 
-	<SCRIPT type='text/javascript' SRC='configuration/constantes.js'></SCRIPT>
-	<SCRIPT type='text/javascript' SRC='include/script/toolbar.js'></SCRIPT>
-	<script type='text/javascript' src="include/script/menu_util.js"></script>
-	<SCRIPT type='text/javascript'  SRC='include/script/fonction_util.js'></script>
-	<SCRIPT type='text/javascript' SRC='include/script/hashtable.js'></SCRIPT>
-	<SCRIPT type='text/javascript' SRC='include/script/fct_parent_menu.js'></SCRIPT>
-
-	<link rel="stylesheet" type="text/css" href="../../../../include/script/yui/build/container/assets/skins/sam/container.css"/>
-	<link rel="stylesheet" type="text/css" href="../../../../include/script/yui/build/resize/assets/skins/sam/resize.css"/>
-	<link rel="stylesheet" type="text/css" href="../../../../include/script/yui/build/layout/assets/skins/sam/layout.css" />
-	<link rel="stylesheet" type="text/css" href="include/script/yui/build/tabview/assets/skins/sam/tabview.css" />
-	<link type="text/css" rel="stylesheet" href="include/script/jquery/layout-default-latest.css" />
-	<link rel="stylesheet" type='text/css' href="include/script/jstree/themes/proton/style.css" />
+	<link rel="stylesheet" type="text/css" href="{{asset('../../../../include/script/yui/build/container/assets/skins/sam/container.css')}}"/>
+	<link rel="stylesheet" type="text/css" href="{{asset('../../../../include/script/yui/build/resize/assets/skins/sam/resize.css')}}"/>
+	<link rel="stylesheet" type="text/css" href="{{asset('../../../../include/script/yui/build/layout/assets/skins/sam/layout.css')}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset('include/script/yui/build/tabview/assets/skins/sam/tabview.css')}}" />
+	<link type="text/css" rel="stylesheet" href="{{asset('include/script/jquery/layout-default-latest.css')}}" />
+	<link rel="stylesheet" type='text/css' href="{{asset('include/script/jstree/themes/proton/style.css')}}" />
 	
 	<!--  -->
 	<!-- <link href="include/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -47,15 +45,15 @@
 
 
 	<!-- Css metronic start-->
-	<link href="include/responsives/assets/css/pages/login/login-2.css" rel="stylesheet" type="text/css" />
-	<link href="include/responsives/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="include/responsives/assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="include/responsives/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="include/responsives/assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
-	<link href="include/responsives/assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
-	<link href="include/responsives/assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
-	<link href="include/responsives/assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
-	<link rel="shortcut icon" href="include/responsives/assets/media/logos/favicon.ico" />
+	<link href="{{asset('include/responsives/assets/css/pages/login/login-2.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('include/responsives/assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('include/responsives/assets/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('include/responsives/assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('include/responsives/assets/css/themes/layout/header/base/light.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('include/responsives/assets/css/themes/layout/header/menu/light.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('include/responsives/assets/css/themes/layout/brand/dark.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('include/responsives/assets/css/themes/layout/aside/dark.css')}}" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="{{('include/responsives/assets/media/logos/favicon.ico')}}" />
 	<!-- Css metronic end-->
 	<!-- Js metronic start-->
 	<script>var HOST_URL = "https://keenthemes.com/metronic/tools/preview";</script>
@@ -64,16 +62,16 @@
 	</script>
 	<!--end::Global Config-->
 	<!--begin::Global Theme Bundle(used by all pages)--> 
-	<script language='javascript' src="include/responsives/assets/plugins/global/plugins.bundle.js"></script> 
-	<script language='javascript' src="include/responsives/assets/plugins/custom/prismjs/prismjs.bundle.js"></script> 
+	<script language='javascript' src="{{asset('include/responsives/assets/plugins/global/plugins.bundle.js')}}"></script> 
+	<script language='javascript' src="{{asset('include/responsives/assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script> 
 	<!--end::Global Theme Bundle-->
 	<!--begin::Page Scripts(used by this page)-->
-	<script language='javascript' src="include/responsives/assets/js/scripts.bundle.js"></script> 
-	<script src="include/responsives/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-	<script src="include/responsives/assets/js/pages/widgets.js"></script>
+	<script language='javascript' src="{{asset('include/responsives/assets/js/scripts.bundle.js')}}"></script> 
+	<script src="{{asset('include/responsives/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
+	<script src="{{asset('include/responsives/assets/js/pages/widgets.js')}}"></script>
 	<!-- Js metronic end-->
 	<!-- Template Main CSS File -->
-	<link href="include/assets/css/style.css" rel="stylesheet">
+	<link href="{{asset('include/assets/css/style.css')}}" rel="stylesheet">
 	<!--end::Demo Panel-->
 	<script>var HOST_URL = "https://keenthemes.com/metronic/tools/preview";</script>
 	<!--begin::Global Config(global config for global JS scripts)-->
@@ -1558,110 +1556,7 @@ id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav">
 								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="javascript:;" style="margin-left: 17px;" class="menu-link menu-toggle">
-										<span class="svg-icon menu-icon">
-											<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-													<rect x="0" y="0" width="24" height="24" />
-													<rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
-													<path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
-												</g>
-											</svg>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-text btn-txt-dash">Applications</span>
-										<i class="noti-dot"></i>
-									</a>
-									<div class="menu-submenu">
-										<i class="menu-arrow"></i>
-										<ul class="menu-subnav">
-											<li class="menu-item menu-item-parent" aria-haspopup="true">
-												<span class="menu-link">
-													<span class="menu-text btn-txt-dash">Applications</span>
-												</span>
-											</li>
-											<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-												<a href="javascript:;" class="menu-link menu-toggle">
-													<i class="menu-bullet menu-bullet-line">
-														<span></span>
-													</i>
-													<span class="menu-text">Users</span>
-													<span class="menu-label">
-														<span class="label label-rounded label-primary">6</span>
-													</span>
-													<i class="menu-arrow"></i>
-												</a>
-												<div class="menu-submenu">
-													<i class="menu-arrow"></i>
-													<ul class="menu-subnav">
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/apps/user/list-default.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">List - Default</span>
-															</a>
-														</li>
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/apps/user/list-datatable.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">List - Datatable</span>
-															</a>
-														</li>
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/apps/user/list-columns-1.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">List - Columns 1</span>
-															</a>
-														</li>
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/apps/user/list-columns-2.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">List - Columns 2</span>
-															</a>
-														</li>
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/apps/user/add-user.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">Add User</span>
-															</a>
-														</li>
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/apps/user/edit-user.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">Edit User</span>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</li>
-											<li class="menu-item" aria-haspopup="true">
-												<a href="custom/apps/inbox.html" class="menu-link">
-													<i class="menu-bullet menu-bullet-line">
-														<span></span>
-													</i>
-													<span class="menu-text">Inbox</span>
-													<span class="menu-label">
-														<span class="label label-danger label-inline">new</span>
-													</span>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="javascript:;" style="margin-left: 17px;" class="menu-link menu-toggle">
+									<a href="{{route('achat.index')}}" style="margin-left: 17px;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -1673,152 +1568,44 @@ id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-text btn-txt-dash">Pages</span>
+										<span class="menu-text btn-txt-dash">Achat</span>
+										<i class="noti-dot"></i>
+									</a> 
+								</li>
+
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+									<a href="{{route('finance.index')}}" style="margin-left: 17px;" class="menu-link menu-toggle">
+										<span class="svg-icon menu-icon">
+											<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<rect x="0" y="0" width="24" height="24" />
+													<rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
+													<path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
+												</g>
+											</svg>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-text btn-txt-dash">Finance</span>
 										<i class="noti-dot"></i>
 									</a>
-									<div class="menu-submenu">
-										<i class="menu-arrow"></i>
-										<ul class="menu-subnav">
-											<li class="menu-item menu-item-parent" aria-haspopup="true">
-												<span class="menu-link">
-													<span class="menu-text btn-txt-dash">Pages</span>
-												</span>
-											</li>
-											<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-												<a href="javascript:;" class="menu-link menu-toggle">
-													<i class="menu-bullet menu-bullet-dot">
-														<span></span>
-													</i>
-													<span class="menu-text">Login</span>
-													<i class="menu-arrow"></i>
-												</a>
-												<div class="menu-submenu">
-													<i class="menu-arrow"></i>
-													<ul class="menu-subnav">
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/pages/login/login-1.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">Login 1</span>
-															</a>
-														</li>
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/pages/login/login-2.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">Login 2</span>
-															</a>
-														</li>
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/pages/login/login-3.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">Login 3</span>
-															</a>
-														</li>
-														<li class="menu-item" aria-haspopup="true">
-															<a href="custom/pages/login/login-4.html" class="menu-link">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">Login 4</span>
-															</a>
-														</li>
-														<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-															<a href="javascript:;" class="menu-link menu-toggle">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">Login 5</span>
-																<span class="menu-label">
-																	<span class="label label-inline label-info">Wizard</span>
-																</span>
-																<i class="menu-arrow"></i>
-															</a>
-															<div class="menu-submenu">
-																<i class="menu-arrow"></i>
-																<ul class="menu-subnav">
-																	<li class="menu-item" aria-haspopup="true">
-																		<a href="custom/pages/login/login-5/signup.html" class="menu-link">
-																			<i class="menu-bullet menu-bullet-dot">
-																				<span></span>
-																			</i>
-																			<span class="menu-text">Sign Up</span>
-																		</a>
-																	</li>
-																	<li class="menu-item" aria-haspopup="true">
-																		<a href="custom/pages/login/login-5/signin.html" class="menu-link">
-																			<i class="menu-bullet menu-bullet-dot">
-																				<span></span>
-																			</i>
-																			<span class="menu-text">Sign In</span>
-																		</a>
-																	</li>
-																	<li class="menu-item" aria-haspopup="true">
-																		<a href="custom/pages/login/login-5/forgot.html" class="menu-link">
-																			<i class="menu-bullet menu-bullet-dot">
-																				<span></span>
-																			</i>
-																			<span class="menu-text">Forgot Password</span>
-																		</a>
-																	</li>
-																</ul>
-															</div>
-														</li>
-														<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-															<a href="javascript:;" class="menu-link menu-toggle">
-																<i class="menu-bullet menu-bullet-dot">
-																	<span></span>
-																</i>
-																<span class="menu-text">Classic</span>
-																<i class="menu-arrow"></i>
-															</a>
-															<div class="menu-submenu">
-																<i class="menu-arrow"></i>
-																<ul class="menu-subnav">
-																	<li class="menu-item" aria-haspopup="true">
-																		<a href="custom/pages/login/classic/login-1.html" class="menu-link">
-																			<i class="menu-bullet menu-bullet-dot">
-																				<span></span>
-																			</i>
-																			<span class="menu-text">Login 1</span>
-																		</a>
-																	</li>
-																	<li class="menu-item" aria-haspopup="true">
-																		<a href="custom/pages/login/classic/login-2.html" class="menu-link">
-																			<i class="menu-bullet menu-bullet-dot">
-																				<span></span>
-																			</i>
-																			<span class="menu-text">Login 3</span>
-																		</a>
-																	</li>
-																	<li class="menu-item" aria-haspopup="true">
-																		<a href="custom/pages/login/classic/login-3.html" class="menu-link">
-																			<i class="menu-bullet menu-bullet-dot">
-																				<span></span>
-																			</i>
-																			<span class="menu-text">Login 4</span>
-																		</a>
-																	</li>
-																	<li class="menu-item" aria-haspopup="true">
-																		<a href="custom/pages/login/classic/login-4.html" class="menu-link">
-																			<i class="menu-bullet menu-bullet-dot">
-																				<span></span>
-																			</i>
-																			<span class="menu-text">Login 5</span>
-																		</a>
-																	</li>
-																</ul>
-															</div>
-														</li>
-													</ul>
-												</div>
-											</li>
-										</ul>
-									</div>
+								</li>
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+									<a href="{{route('profil.index')}}" style="margin-left: 17px;" class="menu-link menu-toggle">
+										<span class="svg-icon menu-icon">
+											<!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<rect x="0" y="0" width="24" height="24" />
+													<rect fill="#000000" opacity="0.3" x="4" y="4" width="8" height="16" />
+													<path d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z" fill="#000000" fill-rule="nonzero" />
+												</g>
+											</svg>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-text btn-txt-dash">Profil</span>
+										<i class="noti-dot"></i>
+									</a>
 								</li>
 							</ul>
 							<!--end::Menu Nav-->
@@ -1919,10 +1706,7 @@ id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader
 							</div>
 							<!--end::Copyright-->
 							<!--begin::Nav-->
-							<div class="nav nav-dark">
-								<a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-5">{CST_DATE}</a>
-							</div>
-							<!--end::Nav-->
+							
 						</div>
 						<!--end::Container-->
 					</div>
@@ -4128,19 +3912,19 @@ id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader
             treeInit();
         }
     </SCRIPT>
-    <script src="include/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="include/assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="include/assets/vendor/chart.js/chart.min.js"></script>
-    <script src="include/assets/vendor/echarts/echarts.min.js"></script>
-    <script src="include/assets/vendor/quill/quill.min.js"></script>
-    <script src="include/assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="include/assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="include/assets/vendor/php-email-form/validate.js"></script>
-    <script src="include/assets/js/main.js"></script>
+    <script src="{{asset('include/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('include/assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
+    <script src="{{asset('include/assets/vendor/chart.js/chart.min.js')}}"></script>
+    <script src="{{asset('include/assets/vendor/echarts/echarts.min.js')}}"></script>
+    <script src="{{asset('include/assets/vendor/quill/quill.min.js')}}"></script>
+    <script src="{{asset('include/assets/vendor/simple-datatables/simple-datatables.js')}}"></script>
+    <script src="{{asset('include/assets/vendor/tinymce/tinymce.min.js')}}"></script>
+    <script src="{{asset('include/assets/vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{asset('include/assets/js/main.js')}}"></script>
     <!-- Template Main JS File -->
     <!-- js SweetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="include/Passets/js/message.alert.js"></script>
+    <script src="{{asset('include/Passets/js/message.alert.js')}}"></script>
     <script>
         //swal("Here's the title!", "...and here's the text!");
         //message('#msg_alert', 'success', 'msg');
