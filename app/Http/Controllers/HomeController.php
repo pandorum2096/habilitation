@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Menus;
 use App\sousmenu;
 use App\Action;
-use APP\Profils;
+use App\Profils;
 use App\Permission;
 use Auth;
 
@@ -30,8 +30,7 @@ class HomeController extends Controller
     public function index()
     {
         
-
-        return view('profil.index');
+        
     }
 
     public function store(Request $request)
