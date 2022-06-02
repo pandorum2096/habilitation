@@ -25,7 +25,7 @@ class ProfilsController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**

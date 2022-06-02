@@ -2,19 +2,24 @@
 
 @section('content')
 <div class="container">
-<div class="d-flex justify-content-center"><h1>Creation de profil</h1></div>
-<hr/>
+    <div class="d-flex justify-content-center">
+        <h1>Creation de profil</h1>
+    </div>
+    <hr />
     <div class="row">
-        <div class="form-group col-6">
-            <label>Code</label>
-            <input type="text" class="form-control" placeholder="Entrer code du profil">
-            <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
-        </div>
-        <div class="form-group col-6">
-            <label>Libellé</label>
-            <input type="text" class="form-control" placeholder="Entrer libellé du profil">
-            <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
-        </div>
+        <form method="post" action="{{route('profil.store')}}">
+            @csrf
+            <div class="form-group col-6">
+                <label>Code</label>
+                <input type="text" name="code" class="form-control" placeholder="Entrer code du profil">
+                <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
+            </div>
+            <div class="form-group col-6">
+                <label>Libellé</label>
+                <input type="text" name="libelle" class="form-control" placeholder="Entrer libellé du profil">
+                <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
+            </div>
+       
     </div>
     <div class="table-responsive card">
         <table class="table table-striped custom-table">
@@ -36,72 +41,73 @@
                 <tr>
                     <td>Achat</td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                 </tr>
                 <tr>
                     <td>Finance</td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                     <td class="text-center">
-                        <input type="checkbox" >
+                        <input type="checkbox">
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="d-flex justify-content-center">
-        <button type="button" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Valider</button>
+    <div class="d-flex justify-content-center"> 
+        <button type="submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Valider</button>
         <a href="{{route('profil.index')}}" class="btn btn-light-primary font-weight-bolder px-8 py-4 my-3 font-size-lg">
             <span class="svg-icon svg-icon-md">
             </span>Annuler</a>
     </div>
+    </form>
 </div>
 @endsection
 

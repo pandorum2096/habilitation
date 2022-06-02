@@ -34,12 +34,20 @@ class HomeController extends Controller
     }
 
     public function store(Request $request)
-    { 
-        return view("profil.store");
+    {  
+        $profil = new Profils();
+        $profil->code = $request->code;
+        $profil->libelle = $request->libelle;
+        $profil->statut = true;
+        $profil->save();
+
+        $idProfil = $profil->id;
+
+        return view("profil.index");
     }
 
     public function create()
-    {
+    {  
         return view("profil.store");
     }
 

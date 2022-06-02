@@ -27,3 +27,5 @@ Route::get('/profil/edit','HomeController@edit')->name('profil.edit');
 Route::get('/achat','HomeController@achat')->name('achat.index');
 Route::get('/finance','HomeController@finance')->name('finance.index');
 Route::get('/commercial','HomeController@commercial')->name('commercial.index');
+
+// Route::post('/profil/create','HomeController@create')->name('profil.create');
