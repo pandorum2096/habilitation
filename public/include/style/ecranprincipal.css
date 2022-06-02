@@ -1,0 +1,50 @@
+
+/*
+ * Indispensable pour le fonctionnement des layouts
+ */
+html 
+{ 
+    height: 100%; 
+    width : 100%;
+    overflow:auto;
+} 
+
+body 
+{ 
+    height: 100%; 
+    width : 100%; 
+    margin: 0; 
+    padding: 0;
+}
+
+#leftPanel 
+{ 
+    height: 100%; 
+    width : 100%; 
+    margin: 0; 
+    padding: 0;
+}
+
+#div_menu {
+    margin-left:5px;
+    margin-right:5px;
+}
+#toolbar1 .containertoolbar {
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+	height:	calc(100% - 80px);
+	margin:	0 auto;
+	width:	100%;
+}
+.divs_center{
+    height: calc(100% - 25px);
+    position: absolute;
+    /*top: 76px;*/
+    top: 64px;
+    border: 1px solid #767676;
+    margin-right:5px;
+    background-color: #ffffff;
+}

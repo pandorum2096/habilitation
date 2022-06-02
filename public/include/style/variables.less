@@ -1,0 +1,52 @@
+/***************************
+variables.less POSEIDON
+***************************/
+/* 
+ * couleur Toolbar, navbar, selected element dans l'arbre
+ * la couleur doit etre foncee car la couleur de la fonte est en blanc 
+ */
+//@basetheme: #4a67b3;
+//@basefond: #e9e4e0;
+@basetheme: #0062a1;
+@basefond: #ededed;
+@basetheme_secondaire: #0269DD;
+
+// vert 
+// @basetheme: #437c10;
+// @basefond: #dfe9d7;
+// @basetheme_secondaire: #1e9110;
+// @basetheme_secfonce:  #00643c ;
+
+
+//@grisfonce: #626162;
+@grisfonce: #2F4F4F;
+
+
+//@basetheme: #4D8542;
+//@basetheme: #2E0E63;
+
+@selectiontheme: #f5aa56;
+//@selectiontheme: #4a67b3;
+@basethemedegclair1: lighten(@basetheme, 30%);
+@basethemedegclair2: lighten(@basetheme, 60%);
+@basethemedegfonce1: darken(@basetheme, 20%);
+
+//@basetheme: #297035;
+@hauteurChamp: 25px;
+@font-family-sesin:       "Arial", Helvetica, sans-serif;
+@font-family-base:        @font-family-sesin;
+
+@font-size-base:          13px;
+@font-size-large:         ceil(@font-size-base * 1.25); // ~18px
+@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
+
+@bordureCheckboxLR: #bfbfbf;
+@couleurMarqueCocheCheckboxLR: #FFF;
+@couleurDeFondCheckboxLRChecked: @basetheme;
+
+// Debut rajout Andry - style arborescence
+
+@arbo_dossier_parent_font-weight: bold;
+@arbo_element_enfant_font-style: normal;
+
+@couleurLigneConsulte: #0055C8;

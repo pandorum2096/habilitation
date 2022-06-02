@@ -1,0 +1,32 @@
+var langue_portail='en';
+var pos_yui_portal_label_title = 'Title';
+var pos_yui_portal_label_icon = 'Icon';
+var pos_yui_portal_label_bgcolor = 'Background color';
+var pos_yui_portal_label_number = 'Number';
+var pos_yui_portal_label_profil = 'Profile';
+var pos_yui_portal_label_display_nbr = 'Display count';
+var pos_yui_portal_label_url = 'URL';
+var pos_yui_portal_label_question = 'Question';
+var pos_yui_portal_label_variables = 'Variables';
+var pos_yui_portal_label_public = 'Public';
+var pos_yui_portal_label_question_type_tri = 'Type de tri (1:croissant, 2:d&eacute;croissant)';
+var pos_yui_portal_label_question_colonne_tri = 'Colonne de tri';
+var pos_yui_portal_label_aff_lien_lr = 'Link to result list';
+
+var pos_yui_portal_label_default_bal_title = 'Mailboxes';
+var pos_yui_portal_label_default_profil_title = 'Profiles';
+var pos_yui_portal_label_default_panier_title = 'Cart';
+var pos_yui_portal_label_default_qprivees_title = 'Private Questions';
+var pos_yui_portal_label_default_qpubliques_title = 'Public Questions';
+var pos_yui_portal_label_default_dossier_title = 'Folder content';
+var pos_yui_portal_label_default_histodocs_title = 'Historics';
+var pos_yui_portal_label_default_question_title = 'Query results';
+var pos_yui_portal_label_default_rss_title = 'RSS';
+
+var pos_yui_portal_label_minmax = 'Minimize/Maximize';
+var pos_yui_portal_label_configurer = 'Configure';
+var pos_yui_portal_label_supprimer = 'Remove';
+var pos_yui_portal_label_confirm_supprimer = 'Please confirm removing item ?';
+var pos_yui_portal_label_chargement = 'loading';
+var pos_yui_portal_label_layout = 'Layout';
+var pos_yui_portal_label_actualiser = 'Refresh';

@@ -1,0 +1,54 @@
+.occurrence {    
+	color: #000000;
+    margin-bottom:5px;
+}
+
+.info {
+	font-size: 1.2em;
+	color: #1111cc;
+	text-decoration: underline;
+    margin-bottom:5px;
+}
+
+.divers {
+	color: #0e774a; 
+	font-weight: bold;
+    margin-bottom:10px;
+}
+
+.diverstop {
+	border-width : 1px;
+  	border-top-style: dashed;
+}
+
+.entete{
+    background-color: #4a67b3;
+	color: #fff;
+}
+
+A:link,A:visited, A:active { color: #0066CC; text-decoration: none;}
+A:hover { color: #0066CC; text-decoration: underline ;}
+
+A.lien_resultat_grise:link, A.lien_resultat_grise:visited,
+A.lien_resultat_grise:active, A.lien_resultat_grise:hover {
+	color: #808080; 
+	text-decoration: none;
+}
+
+#menu
+{
+	position: absolute;
+	width: 160px;
+	line-height: 20px;
+	border-style: 1px solid;
+}
+
+.numeroPageSelect {
+	background-color: #bbbbbb;
+	text-align: center;
+}
+
+b.occurrence {    
+  	color: #000000;
+    font-size: 1.1em; 
+}

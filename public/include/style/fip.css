@@ -1,0 +1,166 @@
+#resize {
+    border: 1px solid black;
+    height: 100px;
+    width: 200px;
+    background-color: #fff;
+}
+#resize div.data {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.objet-dd {
+    position:absolute !important;
+    text-align:center;
+    color:#000;
+    cursor:move;
+} 
+
+.objet-dd-rubrique {
+	background-color: #dcdddf;
+    z-index: 2;   
+    border: 2px solid #959799;
+}
+
+p.objet-dd-rubrique {
+	width: 100%;
+	margin-top: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border: none;
+}
+
+.objet-dd-libelle {
+	background-color: #fff;
+    z-index: 2;
+    opacity : 0.5; 
+    filter : alpha(opacity=50); 
+	border: none; 
+}
+
+
+p.objet-dd-libelle {
+	width: 100%;
+	margin-top: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-weight:bold;
+	opacity : 0.9; 
+	filter : alpha(opacity=90);
+	border: none;
+}
+
+.objet-dd-listefichiers {
+	background-color: #fff;
+    z-index: 2;
+    border: 2px solid #959799;
+}
+
+p.objet-dd-listefichiers {
+	width: 100%;
+	margin-top: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border: none;
+}
+
+.objet-dd-groupe {
+    z-index: 1;
+    background-color: #ffffb0;
+    opacity : 0.5; 
+    filter : alpha(opacity=50);  
+    border: 2px solid #959799;
+}
+
+p.objet-dd-groupe {
+	width: 100%;
+	margin-top: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-weight:bold;
+	opacity : 0.9; 
+	filter : alpha(opacity=90);
+	border: none;
+}
+.objet-dd-non-select {
+    border: 1px solid #666;
+}
+
+.objet-dd-select {
+    border: 3px solid blue;
+}
+
+#container-bouton-valid {
+	margin-left: auto;
+	margin-right: auto;
+    z-index: 0;
+}
+
+#container-bouton-objet {
+	margin-left: auto;
+	margin-right: auto;
+	position:absolute;
+	top: 60px;
+	left: 890px;
+    z-index: 0;
+}
+
+#container-fip {
+	position:absolute;
+	top: 40px;
+	left: 60px;
+    height:630px; 
+    width:820px;
+    z-index:0;
+}
+
+.fiche-parametree {
+    height: 601px; 
+    width: 801px;
+    background-image:url('../../images/grille_par_10_grise.gif');
+    z-index: 0;
+}
+
+.labelFip {  
+	color: #000000;
+	text-align: left;
+	text-decoration: underline;
+	font-weight: bold;
+	vertical-align: top;
+	padding-top: 4px;
+	white-space: nowrap;
+}
+
+.objet-dd-clehier {
+	background-color: #dcdddf;
+    z-index: 2;   
+}
+
+p.objet-dd-clehier {
+	width: 100%;
+	margin-top: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border: none;
+}
+
+.objet-dd-rubtableau {
+	background-color: #dcdddf;
+    z-index: 2;   
+    border: 2px solid #959799;
+}
+
+p.objet-dd-rubtableau {
+	width: 100%;
+	margin-top: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border: none;
+}

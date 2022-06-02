@@ -1,0 +1,153 @@
+.bod {
+    display: flex;
+    flex-direction: row;
+}
+
+body {
+    background-image: url('../../responsives/images/image\ de\ font.png');
+}
+
+.containers {
+    background-image: url('../../responsives/images/image\ de\ font.png');
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*navbar*/
+
+.navbars {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 100px;
+    align-content: stretch;
+    margin-top: 10px;
+}
+
+.langues {
+    // position: absolute;
+    text-align: center;
+    width: 5vw;
+    height: 5vh;
+    align-content: center;
+}
+
+
+/*fin navbar*/
+
+
+/*corpus*/
+
+.corpus {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/*images banniere gauche*/
+
+.gauche {}
+
+.ban {
+    padding: 50px 0px 0px 10px;
+    height: 85vh;
+}
+
+
+/*fin images banniere gauche*/
+
+.droite {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 0px 0px 150px;
+}
+
+.images {}
+
+.formulaires {
+    width: 30vw;
+}
+
+
+/*fin corpus*/
+
+.footers {
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.colors {
+    background-color: #1C9BD8;
+    width: 100px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+/* media*/
+
+@media (max-width: 912px) {
+    .bod {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbars {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-right: 100px;
+    }
+    .langues {
+        text-align: center;
+        margin: 0px;
+        width: 5vw;
+        height: 5vh;
+    }
+    .gauche {
+        display: none;
+    }
+    .ban {
+        display: none;
+    }
+    .corpus {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px 0px 0px 0px;
+    }
+    .droite {
+        padding: 0px 20px 0px 20px;
+        justify-content: space-around;
+    }
+    .formulaires {
+        //z-index: 2;
+        //padding: 100px 10px 0px 10px;
+        margin-top: 70px;
+        width: auto;
+    }
+    .footers {
+        /* display: none; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 5vh;
+        align-items: stretch;
+        font-size: 10px;
+        align-content: center;
+        margin-top: 10px;
+    }
+    .colors {
+        // background-color: #1C9BD8;
+        // width: 50px;
+        display: none;
+    }
+}

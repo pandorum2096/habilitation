@@ -1,0 +1,148 @@
+@basetheme: #4a67b3;
+/* 
+ * couleur du fond 
+ */
+@basefond: #e9e4e0;
+
+@grisfonce: #626162;
+
+//@basetheme: #4D8542;
+//@basetheme: #2E0E63;
+@selectiontheme: #4a67b3;
+@basethemedegclair1: lighten(@basetheme, 30%);
+@basethemedegclair2: lighten(@basetheme, 60%);
+@basethemedegfonce1: darken(@basetheme, 20%);
+
+div.hidden {
+	display: none;
+	width: 0px;	
+}
+div.portlet {
+    position: relative;
+    zoom: 1;
+    background: #F9F9FC;
+  	border: 1px solid #D4D8EB;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    /*espace entre les portlets */
+    margin: 10px 0;
+    padding-bottom: 1px;
+    height: 100%;
+    width: 100%;
+}
+div.portlet form.configureform {
+    overflow: hidden;	
+}
+div.portlet form.configureform td.inputChamp {
+	border: none;
+}
+div.portlet div.portletcontent {
+    clear: both;
+    overflow: hidden;
+    zoom: 1;
+    padding-left: 5px;
+}
+div.portlet div.errorloading {
+    background-image: url('../../images/portail/error.gif');
+    background-repeat: no-repeat;
+    background-position: 5px 0px;
+    padding: 0px 5px 0px 35px;
+}
+div.portlet div.loading {
+    background-image: url('../../images/portail/progress.gif');
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    padding: 0px 0px 0px 25px;
+    font-size: 80%;	
+}
+div.portletdrag {
+	opacity: 0.5;
+	-ms-filter: "alpha(opacity=50)"; /* IE 8 */
+    filter : alpha(opacity=50); /* IE < 8 */ 
+}
+div.portlet h2 {
+    position: relative;
+    zoom: 1;
+    cursor: move;
+    background-color: @basefond;
+    font-weight: bold;
+    margin: 0;
+    padding: 3px 5px 3px;
+    font-weight: bold;
+    color: @basethemedegfonce1;
+}
+
+.body_portlet_edition_0 div.portlet h2 {
+    cursor: default;
+}
+
+div.portlettitle {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-left: 7px;
+    min-height: 18px;
+    display: flex;
+    align-items: end;
+    margin-top:3px;
+}
+div.minned h2 {
+    border-bottom: 1px solid #ccc;
+}
+div.portlet h2 a {
+    background-color: #F9F9FC;
+    border:1px solid #E5E6F1;
+    color: @grisfonce;
+    text-align: center;
+    display: block;
+    height: 13px;
+    width: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    right: 4px;
+    top: 1px;
+    position: absolute;
+    margin: 4px 2px 2px 2px;
+    padding: 0;
+}
+div.portlet h2 a.disabledclose {
+/*    opacity: .5;
+    filter: alpha(opacity=50);
+    */
+   	display: none;
+    cursor: default;	
+}
+div.portlet h2 a.disabledconf, 
+div.minned h2 a.disabledconf {
+/*    right: 25px;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    */
+   	display: none;
+    cursor: default;	
+}
+div.portlet h2 a.disabledmin, 
+div.minned h2 a.disabledmin {
+ /*   right: 46px;
+    opacity: .5;
+    filter: alpha(opacity=50);*/
+   	display: none;
+    cursor: default;	
+}
+div.portlet h2 a.conf, 
+div.minned h2 a.conf  {
+    right: 25px;
+}
+div.portlet h2 a.min, 
+div.minned h2 a.min {
+    right: 46px;
+}
+div.portlet h2 a.refresh-std-admin, 
+div.minned h2 a.refresh-std-admin {
+    right: 67px;
+}
+div.portlet h2 a:hover.close, 
+div.portlet h2 a:hover.min, 
+div.portlet h2 a:hover.conf {
+    border-color: #D4D8EB;
+}

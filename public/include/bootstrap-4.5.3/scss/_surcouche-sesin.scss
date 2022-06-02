@@ -1,0 +1,80 @@
+// Surcouche Sesin
+.tab-control {
+    $background-tab-active: #f8f7f6;
+    // .nav-link.active { // $body-bg:
+        // border-bottom-color: $background-tab-active;
+        // background-color: $background-tab-active;
+    // }
+    .tab-content {//.tab-pane.active
+        background-color: $body-bg;
+        border: 1px solid $gray-300;
+        border-top: none;
+        .form-control ~ a {
+            display: flex;
+            align-items: center;
+        }
+    }
+    // si les onglets sont presents (!rub tableaux), suppression bordure haute
+    nav + .tab-content {//.tab-pane.active
+        border-top: none;
+        height: calc(100vh - 120px);
+        overflow-y: auto;
+    } 
+}
+.col-form-label {
+    padding-bottom: 0;
+}
+.card-title {
+    margin-top: 0.15rem;
+    margin-bottom: 0;
+}
+h2.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.card-body {
+    padding: 0.75rem;
+}
+
+.nav-link.active,
+.nav-item.show .nav-link {
+  font-weight: bold;
+}
+/*
+.d-flex {
+    flex-wrap: wrap;
+}
+.form-control {
+    flex: 1;
+}
+.form-control[maxlength='1'],
+.form-control[maxlength='2'],
+.form-control[maxlength='3'],
+.form-control[maxlength='4'],
+.form-control[maxlength='5'],
+.form-control[maxlength='6'],
+.form-control[maxlength='7'],
+.form-control[maxlength='8'],
+.form-control[maxlength='9'],
+.form-control[maxlength='10'],
+.form-control[maxlength='11']{
+     flex: inherit;
+}
+*/
+/* Ajout depuis Airbus*/
+// Permet de donner à n’importe quel div la taille d’un input.
+.input-height {
+    height: $input-height;
+}
+
+//Les éléments « textarea » et « input » prennent la taille en fonction de ce qu’il y a à écrire, sauf pour la plus petite taille par soucie d’homogénéisation et parce que les espaces ne sont plus très grand et que les éléments sont les uns en dessous des autres. 
+@include media-breakpoint-up(sm) {
+    .form-control {
+        &[cols='1'],&[cols='2'],&[cols='3'],&[cols='4'],&[cols='5'],&[cols='6'],&[cols='7'],&[cols='8'],&[cols='9'],&[cols='10'],
+        &[cols='11'],&[cols='12'],&[cols='13'],&[cols='14'],&[cols='15'],&[cols='16'],&[cols='17'],&[cols='18'],&[cols='19'],&[cols='20'],
+        &[maxlength='1'],&[maxlength='2'],&[maxlength='3'],&[maxlength='4'],&[maxlength='5'],&[maxlength='6'],&[maxlength='7'],&[maxlength='8'],
+        &[maxlength='9'],&[maxlength='10'],&[maxlength='11'] {
+            max-width: max-content;
+        }
+    }
+}

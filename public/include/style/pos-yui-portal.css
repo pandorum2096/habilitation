@@ -1,0 +1,172 @@
+/**
+ * 	bouton afficher/ masquer liste des portlets & layouts disponibles
+ */
+#showconfigpaneltoggler[data-is-open='1'] {
+	border: none; 
+	outline: none;
+	width: 11px;
+	height: 11px;
+	background-color: transparent; 
+	cursor: pointer; 
+    background-image: url('../../images/portail/moins.gif');
+    background-repeat: no-repeat;
+	padding: 0; 
+	margin: 0;	
+}
+#showconfigpaneltoggler[data-is-open='0'] {
+	border: none; 
+	outline: none;
+	width: 11px;
+	height: 11px;
+	background-color: transparent; 
+	cursor: pointer; 
+    background-image: url('../../images/portail/plus.gif');
+    background-repeat: no-repeat;
+	padding: 0; 
+	margin: 0;	
+}
+#editiontoggler[data-is-edit='1'] {
+	border: none; 
+	outline: none;
+	width: 24px;
+	height: 24px;
+	background-color: transparent; 
+	cursor: pointer; 
+    background-image: url('../../images/portail/retour.png');
+    background-repeat: no-repeat;
+	padding: 0; 
+	margin: 0;	
+}
+#editiontoggler[data-is-edit='0'] {
+	
+    display:none;	
+}
+
+/**
+ * 	zone principale d'affichage du portail
+ */
+#layoutdisplay {
+    float: right;
+    position: relative;
+    width: 100%;
+    
+    /*box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);*/
+    margin-bottom: 4px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* cas de l'administrateur */
+body.body_portlet_admin1 #layoutdisplay {
+    background: transparent;
+}
+
+/* non administrateur */
+body.body_portlet_admin0 #layoutdisplay {
+    background: transparent;
+}
+
+#layoutdisplay:after { display: block; clear: both; visibility: hidden; content: '.'; height: 0;}
+
+/**
+ * 	zone d'affichage du display
+ */
+#layoutdisplay div.displayZone {
+	position: relative;
+	float: left;	
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+/**
+ * 	colonne d'affichage (drop target)
+ */
+ul.verticalGroup {
+	height: 100%; 
+	padding-top: 0px; 
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 25px;
+	margin: 4px;
+	min-width: 300px;
+	flex: 1;
+}
+ul.verticalGroup[data-group-weight='2'] {
+	flex-grow: 2;
+}
+ul.verticalGroup[data-group-weight='1'] {
+	flex-grow: 1;
+}
+/**
+ * 	zone d'affichage d'un portlet
+ */
+li.verticalGroupZone {
+	list-style: none outside none; 
+	margin-bottom: 4px; 
+	width: 100%; 
+	height: auto;
+}
+
+/**
+ * 	div pour listes des portlets & layouts disponibles (mode edition)
+ */
+#portletslist, #layoutslist {
+/*    margin-top: .75em;*/
+    height: auto;
+    width: 17%;
+    padding: .5em;
+    position: relative;
+	float: left;
+    background: #F9F9FC;
+    border: 1px solid #D4D8EB;
+
+    /*box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);*/
+    margin-bottom: 4px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#portletslist ul {
+	margin: 0;
+	padding: 0;
+}
+
+#portletslist ul li {
+	list-style: none outside none;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    margin: 3px;
+    cursor: move;
+    min-height: 18px;
+}
+
+#portletslist ul li.disabled {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    cursor: default;
+}
+
+#layoutslist ul {
+	margin: 0;
+	padding: 0;
+}
+
+#layoutslist ul li {
+	list-style: none outside none;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    margin: 3px;
+    cursor: pointer;
+    min-height: 18px;
+}
+
+/**
+ * 	marqueur d'insertion
+ */
+div.vinsertiondiv {
+	width: 100%; 
+	height: 2px;
+	background: #FFB25C;	
+}

@@ -1,0 +1,109 @@
+/* Copyright (c) 2006 Yahoo! Inc. All rights reserved. */
+
+/* first or middle sibling, no children */
+.ygtvtn { background: url(../../../images/yui/tree_folder/tn.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+/* first or middle sibling, collapsable */
+.ygtvtm { background: url(../../../images/yui/tree_folder/tm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, collapsable, hover */
+.ygtvtmh { background: url(../../../images/yui/tree_folder/tmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable */
+.ygtvtp { background: url(../../../images/yui/tree_folder/tp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable, hover */
+.ygtvtph { background: url(../../../images/yui/tree_folder/tph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* last sibling, no children */
+.ygtvln { background: url(../../../images/yui/tree_folder/ln.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+/* Last sibling, collapsable */
+.ygtvlm { background: url(../../../images/yui/tree_folder/lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, collapsable, hover */
+.ygtvlmh { background: url(../../../images/yui/tree_folder/lmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable */
+.ygtvlp { background: url(../../../images/yui/tree_folder/lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable, hover */
+.ygtvlph { background: url(../../../images/yui/tree_folder/lph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+
+
+/* Last sibling, collapsable */
+.ygtv_vert_lm { background: url(../../../images/yui/tree_folder/vert_lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, collapsable, hover */
+.ygtv_vert_lmh { background: url(../../../images/yui/tree_folder/vert_lmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable */
+.ygtv_vert_lp { background: url(../../../images/yui/tree_folder/vert_lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable, hover */
+.ygtv_vert_lph { background: url(../../../images/yui/tree_folder/vert_lph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, collapsable */
+.ygtv_vert_tm { background: url(../../../images/yui/tree_folder/vert_tm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, collapsable, hover */
+.ygtv_vert_tmh { background: url(../../../images/yui/tree_folder/vert_tmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable */
+.ygtv_vert_tp { background: url(../../../images/yui/tree_folder/vert_tp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable, hover */
+.ygtv_vert_tph { background: url(../../../images/yui/tree_folder/vert_tph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+
+/* Last sibling, collapsable */
+.ygtv_root_vert_lm { background: url(../../../images/yui/tree_folder/vert_root_lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable */
+.ygtv_root_vert_lp { background: url(../../../images/yui/tree_folder/vert_root_lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, collapsable */
+.ygtv_root_vert_lmh { background: url(../../../images/yui/tree_folder/vert_root_lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable */
+.ygtv_root_vert_lph { background: url(../../../images/yui/tree_folder/vert_root_lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+
+/* Loading icon */
+.ygtvloading { background: url(../../../images/yui/tree_folder/loading.gif) 0 0 no-repeat; width:16px; height:22px; }
+
+/* the style for the empty cells that are used for rendering the depth 
+ * of the node */
+.ygtvdepthcell { background: url(../../../images/yui/tree_folder/vline.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+.ygtvblankdepthcell { width:17px; height:22px; }
+
+/* the style of the div around each node */
+.ygtvitem { }  
+
+.ygtvitem  table{
+    margin-bottom:0;
+}
+.ygtvitem  td {
+    border:none;padding:0;
+} 
+
+
+/* the style of the div around each node's collection of children */
+.ygtvchildren { }  
+* html .ygtvchildren { height:1%; }  
+
+/* the style of the text label in ygTextNode */
+.ygtvlabel, .ygtvlabel:link, .ygtvlabel:visited, .ygtvlabel:hover { 
+	margin-left:2px;
+	text-decoration: none;
+}
+
+/* the style of the text label in ygTextNode */
+.ygtvlabelselect, .ygtvlabelselect:link, .ygtvlabelselect:visited, .ygtvlabelselect:hover { 
+	margin-left:2px;
+	text-decoration: none;
+	color: white;
+	background-color: blue;
+}

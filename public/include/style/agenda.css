@@ -1,0 +1,55 @@
+/* Yui propose 4 couleurs de fond  pour les cellules du calendrier*/
+/* voici les définitions de 17 autres couleurs */
+
+
+.yui-skin-sam .yui-calendar td.class1 	{ background-color:#00CC00; }
+.yui-skin-sam .yui-calendar td.class2 	{ background-color:#FF66FF; }
+.yui-skin-sam .yui-calendar td.class3 	{ background-color:#FFCC00; }
+.yui-skin-sam .yui-calendar td.class4 	{ background-color:#33CCFF; }
+.yui-skin-sam .yui-calendar td.class5 	{ background-color:#006600; }
+.yui-skin-sam .yui-calendar td.class6 	{ background-color:#9966FF; }
+.yui-skin-sam .yui-calendar td.class7 	{ background-color:#F99000; }
+.yui-skin-sam .yui-calendar td.class8 	{ background-color:#99FFFF; }
+.yui-skin-sam .yui-calendar td.class9 	{ background-color:#999966; }
+.yui-skin-sam .yui-calendar td.class10 	{ background-color:#CC9966; }
+.yui-skin-sam .yui-calendar td.class11 	{ background-color:#663333; }
+.yui-skin-sam .yui-calendar td.class12 	{ background-color:#339999; }
+.yui-skin-sam .yui-calendar td.class13 	{ background-color:#FFFF00; }
+.yui-skin-sam .yui-calendar td.class14 	{ background-color:#FFCC99; }
+.yui-skin-sam .yui-calendar td.class15 	{ background-color:#CC33CC; }
+.yui-skin-sam .yui-calendar td.class16 	{ background-color:#336666; }
+.yui-skin-sam .yui-calendar td.class17 	{ background-color:#996600; }
+.yui-skin-sam .yui-calendar td.class18 	{ background-color:#CC99FF; }
+.yui-skin-sam .yui-calendar td.class19 	{ background-color:#FF9900; }
+.yui-skin-sam .yui-calendar td.class20 	{ background-color:#3333FF; }
+/*rouge pour plusieurs documents à une même date */
+.yui-skin-sam .yui-calendar td.class99 	{ background-color:#FF0000; }
+
+/* Test des couleurs */
+/******************************************************************************/
+
+/*<table align="center">*/
+/*<tr><td style='background-color:#00CC00;'>class1</td></tr>*/
+/*<tr><td style='background-color:#FF66FF;'>class2</td></tr>*/
+/*<tr><td style='background-color:#FFCC00;'>class3</td></tr>*/
+/*<tr><td style='background-color:#33CCFF;'>class4</td></tr>*/
+/*<tr><td style='background-color:#006600;'>class5</td></tr>*/
+/*<tr><td style='background-color:#9966FF;'>class6</td></tr>*/
+/*<tr><td style='background-color:#F99000;'>class7</td></tr>*/
+/*<tr><td style='background-color:#99FFFF;'>class8</td></tr>*/
+/*<tr><td style='background-color:#999966;'>class9</td></tr>*/
+/*<tr><td style='background-color:#CC9966;'>class10</td></tr>*/
+/*<tr><td style='background-color:#663333;'>class11</td></tr>*/
+/*<tr><td style='background-color:#339999;'>class12</td></tr>*/
+/*<tr><td style='background-color:#FFFF00;'>class13</td></tr>*/
+/*<tr><td style='background-color:#FFCC99;'>class14</td></tr>*/
+/*<tr><td style='background-color:#CC33CC;'>class15</td></tr>*/
+/*<tr><td style='background-color:#336666;'>class16</td></tr>*/
+/*<tr><td style='background-color:#996600;'>class17</td></tr>*/
+/*<tr><td style='background-color:#CC99FF;'>class18</td></tr>*/
+/*<tr><td style='background-color:#FF9900;'>class19</td></tr>*/
+/*<tr><td style='background-color:#3333FF;'>class20</td></tr>*/
+/*<tr><td style='background-color:#FF0000;'>class99</td></tr>*/
+/*</table>*/
+
+/******************************************************************************/

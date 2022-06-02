@@ -1,0 +1,474 @@
+.menu ul{
+    /* hauteur des zones de la barre de menus*/
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:auto;
+}
+
+
+/* barre d'outils */
+#toolbar1 {
+    height: auto;
+}	
+#toolbar1 .libelle-menu-entete {
+    font-weight: bold;
+    margin-right: 20px;
+}
+#toolbar1 #span_recherche {
+    white-space: nowrap;
+}
+#toolbar1 #champ_recherche {
+    width: 150px;
+    min-height: 25px!important;
+}
+#toolbar1 #btn_champ_recherche {
+    padding:2px 2px; 
+    border:none; 
+    font-weight:bold;
+    vertical-align: bottom;
+}
+#toolbar1 .cartevisite_libelle {  
+	font-size: 0.9em; 
+	font-weight: bold; 
+	color: white;
+}
+#toolbar1 table.cartevisite {
+    margin-left : 15px;
+    margin-right : 25px;
+    height : 39px;
+    border : 0px;
+}
+#toolbar1 td.menu_logo_version {
+    width: 280px;
+}
+
+
+/*DEBUT MENU*/
+header{
+	z-index:1; 
+	position:relative;
+	width:100%;
+	/* background:#00205B; */
+	background:yellow;
+}
+#toolbar1 nav{
+	position:relative;
+	width:100%;
+	margin:0 auto;
+}
+#toolbar1 #cssmenu,#cssmenu ul,#cssmenu ul li,#cssmenu ul li a,#cssmenu #head-mobile{
+	border:0;
+	list-style:none;
+	line-height:1;
+	display:block;
+	position:relative;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+#toolbar1 #cssmenu:after,#cssmenu > ul:after{
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	line-height:0;
+	height:0;
+}
+#toolbar1 #cssmenu #head-mobile{
+	display:none;
+}
+#toolbar1 #cssmenu{
+	float:right;
+	font-family:sans-serif;
+	background:#0062a1; 
+	width:100%;
+}
+#toolbar1 #cssmenu > ul > li{
+	float:left;
+}
+#toolbar1 #cssmenu > ul > li > a{
+	padding:14px;
+	font-size:11px;
+	letter-spacing:1px;
+	text-decoration:none;
+	color:#ddd;
+	font-weight:500;
+}
+#toolbar1 #cssmenu > ul > li:hover > a,#cssmenu ul li.active a{
+	color:#fff;
+}
+#toolbar1 #cssmenu > ul > li:hover,#cssmenu ul li.active:hover,#cssmenu ul li.active,#cssmenu ul li.has-sub.active:hover{
+	background:#3bb2ff!important;
+	-webkit-transition:background .3s ease;
+	-ms-transition:background .3s ease;
+	transition:background .3s ease;
+}
+#toolbar1 #cssmenu > ul > li.has-sub > a{
+	/* padding de + espace texte titre*/
+	padding-right:20px;
+}
+#toolbar1 #cssmenu > ul > li.has-sub > a:after{
+	position:absolute;
+	top:22px;
+	right:11px;
+	width:8px;
+	height:2px;
+	display:block;
+	background:#ddd;
+	content:''
+}
+#cssmenu > ul > li.has-sub > a:before{
+	position:absolute;
+	top:19px;
+	right:14px;
+	display:block;
+	width:2px;
+	height:8px;
+	background:#ddd;
+	content:'';
+	-webkit-transition:all .25s ease;
+	-ms-transition:all .25s ease;
+	transition:all .25s ease
+}
+#cssmenu > ul > li.has-sub:hover > a:before{
+	top:23px;height:0
+}
+#cssmenu ul ul{
+	position:absolute;
+	left:-9999px;
+}
+#cssmenu ul ul li{
+	height:0;
+	-webkit-transition:all .25s ease;
+	-ms-transition:all .25s ease;
+	background:#0062a1; 
+	transition:all .25s ease
+}
+#cssmenu ul ul li:hover{
+	background:#0062a1;
+}
+#cssmenu li:hover > ul{
+	left:auto;
+}
+#cssmenu li:hover > ul > li{
+	height:35px;
+}
+#cssmenu ul ul ul{
+	margin-left:100%;top:0
+}
+#cssmenu ul ul li a{
+	border-bottom:1px solid rgba(150,150,150,0.15);
+	padding:11px 15px;
+	width:210px;
+	font-size:12px;
+	text-decoration:none;
+	color:#ddd;
+	font-weight:400;
+	text-align: left;
+}
+#cssmenu ul ul li:last-child > a,#cssmenu ul ul li.last-item > a{
+	border-bottom:0;
+}
+#cssmenu ul ul li:hover > a,#cssmenu ul ul li a:hover{
+	color:#fff;
+	/* background:#0062a1; */
+	background:#3bb2ff;
+}
+#cssmenu ul ul li.has-sub > a{
+	font-weight:bold;
+}
+#cssmenu ul ul li.has-sub > a:after{
+	position:absolute;
+	top:16px;
+	right:11px;
+	width:8px;
+	height:2px;
+	display:block;
+	background:#ddd;
+	content:''
+}
+#cssmenu ul ul li.has-sub > a:before{
+	position:absolute;
+	top:13px;
+	right:14px;
+	display:block;
+	width:2px;
+	height:8px;
+	background:#ddd;
+	content:'';
+	-webkit-transition:all .25s ease;
+	-ms-transition:all .25s ease;
+	transition:all .25s ease
+}
+#cssmenu ul ul > li.has-sub:hover > a:before{
+	top:17px;height:0;
+}
+#cssmenu ul ul li.has-sub:hover,#cssmenu ul li.has-sub ul li.has-sub ul li:hover{
+	background:#363636; 
+}
+#cssmenu ul ul ul li.active a{
+	border-left:1px solid #333;
+}
+#cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active> a{
+	border-top:1px solid #333;
+}
+#toolbar1 .item-sm-screen{
+	display:none;
+}
+#toolbar1  #span_deconnexion{
+	margin-left:5px !important;
+}
+
+
+
+/* etape 2 : suppression des libellés menu*/
+@media only screen and (min-width: 1024px) and (max-width: 1246px){
+	.menu ul{
+		float:right;
+		padding-left:0 !important;
+	}
+    #toolbar1  .menu-label{
+        display: none;
+    }
+	#span_recherche{
+		float:right;
+		width:100%;
+	}
+	#cssmenu > ul > li > a{
+		padding:15px;
+		margin-right:20px;
+		font-size:2px;
+		letter-spacing:0;
+		font-weight:400;
+	}
+	#toolbar1 img.navbar-img{
+		width:20px;
+		height:20px;
+	}
+	#toolbar1 .item-sm-screen{
+		display:block;
+		height:30px !important;
+		background:#0062a1;
+	}
+	#toolbar1 li.item-sm-screen>a{
+		text-transform: uppercase;
+	}
+}
+
+
+/* etape 3 : menu humberger */
+@media screen and (max-width:1024px){
+	#toolbar1 header{
+		z-index:1; 
+		left:0px;
+		width:100%;
+		background:#00205B;
+	}
+	#toolbar1 {
+	  background-color: #00205B;
+	  background-image: none;
+	}
+	#toolbar1 .cartevisite{
+		display:none;
+	}
+	#toolbar1 nav{
+		width:100%;
+	}
+	#toolbar1 #cssmenu{
+		width:100%;
+	}
+	#toolbar1 #cssmenu ul{
+		width:100%;
+		display:none;
+	}
+	#toolbar1 #cssmenu ul li{
+		width:100%;
+		border-top:1px solid #444;
+	}
+	#toolbar1 #cssmenu ul li:hover{
+		background:#363636;
+	}
+	#toolbar1 #cssmenu ul ul li,#cssmenu li:hover > ul > li{
+		height:auto;
+	}
+	#toolbar1 #cssmenu ul li a,#cssmenu ul ul li a{
+		width:100%;
+		border-bottom:0;
+	}
+	#toolbar1 #cssmenu > ul > li{
+		float:none;
+	}
+	#toolbar1 #cssmenu ul ul li a{
+		padding-left:25px;
+	}
+	#toolbar1 #cssmenu ul ul li{
+		background:#00102E !important;
+	}
+	#toolbar1 #cssmenu ul ul li:hover{
+		background:#0062a1 !important;
+	}
+	#toolbar1#cssmenu ul ul ul li a{
+		padding-left:35px;
+	}
+	#toolbar1 #cssmenu ul ul li a{
+		color:#ddd;
+		background:none;
+	}
+	#toolbar1#cssmenu ul ul ul li a::before{
+		content:" - ";
+	}
+	#toolbar1#cssmenu ul ul li a::before{
+		content:" - ";
+	}
+	#toolbar1 #cssmenu ul ul li:hover > a,#cssmenu ul ul li.active > a{
+		color:#fff;
+	}
+	#toolbar1 #cssmenu ul ul,#cssmenu ul ul ul{
+		position:relative;
+		left:0;width:100%;
+		margin:0;
+		text-align:left;
+	}
+	#toolbar1 #cssmenu > ul > li.has-sub > a:after,#cssmenu > ul > li.has-sub > a:before,#cssmenu ul ul > li.has-sub > a:after,#cssmenu ul ul > li.has-sub > a:before{
+		display:none
+	}
+	#toolbar1 #cssmenu #head-mobile{
+		display:block;
+		padding:23px;
+		color:#ddd;
+		font-size:12px;
+		font-weight:700;
+	}
+	#toolbar1 .button{
+		position:absolute;
+		left:0;
+		top:0;
+		cursor:pointer;
+		z-index: 1;
+	}
+	#toolbar1 .bar1, .bar2, .bar3 {
+		width: 35px;
+		height: 5px;
+		background-color: #fff;
+		margin: 6px 5px 6px;
+		transition: .9s;
+		cursor:pointer;
+		z-index: 1;
+	}
+	#toolbar1 .change .bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+		transform: rotate(-45deg) translate(-9px, 6px);
+	}
+	#toolbar1 .change .bar2 {
+		opacity: 0;
+	}
+	#toolbar1 .change .bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+		transform: rotate(45deg) translate(-8px, -8px);
+	}
+	#toolbar1 #cssmenu .submenu-button{
+		position:absolute;
+		z-index:1;
+		right:0;
+		top:0;
+		display:block;
+		/*border-left:1px solid #444;*/
+		height:46px;
+		width:100%;
+		cursor:pointer;
+	}
+	#toolbar1 #cssmenu .submenu-button.submenu-opened{
+		/*background:#262626;*/
+	}
+	#toolbar1 #cssmenu ul ul .submenu-button{
+		height:34px;
+		width:100%;
+	}
+	#toolbar1 #cssmenu .submenu-button:after{
+		position:absolute;
+		top:22px;
+		right:19px;
+		width:8px;
+		height:2px;
+		display:block;
+		background:#ddd;
+		content:'';
+	}
+	#toolbar1 #cssmenu ul ul .submenu-button:after{
+		top:15px;
+		right:13px
+	}
+	#toolbar1 #cssmenu .submenu-button.submenu-opened:after{
+		background:#fff
+	}
+	#toolbar1 #cssmenu .submenu-button:before{
+		position:absolute;
+		top:19px;
+		right:22px;
+		display:block;
+		width:2px;
+		height:8px;
+		background:#ddd;
+		content:'';
+	}
+	#toolbar1 #cssmenu ul ul .submenu-button:before{
+		top:12px;
+		right:16px
+	}
+	#toolbar1 #cssmenu .submenu-button.submenu-opened:before{
+		/*desactiver +/- du menu deroulant au clic*/
+		/*display:none*/
+	}
+	#toolbar1 #cssmenu ul ul ul li.active a{
+		border-left:none;
+	}
+	#toolbar1 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active > a{
+		border-top:none;
+	}
+	#toolbar1 td.menu_logo_version {
+		width:5px;
+	}
+	#toolbar1  #champ_recherche {
+        width: 150px;
+		min-height: 25px!important;
+    }
+	#toolbar1  #span_recherche {
+		z-index:1 !important;
+		margin-left:-260px !important;
+		position: fixed;
+		top: 1em;
+    }
+	#toolbar1  span.libellemenu{
+		z-index:1 !important;
+		position: fixed;
+		top: 1em;
+	}
+	#toolbar1  #span_aide{
+		margin-left:-90px !important;
+	}
+	#toolbar1  #span_deconnexion{
+		margin-left:-50px !important;
+	}
+	#toolbar1 .containertoolbar{
+		width:100%;
+	}
+	#toolbar1 .item-sm-screen{
+		display:none;
+	}
+}
+
+@media screen and (max-width: 700px) {
+    #toolbar1  #champ_recherche {
+        width: 100px;
+		min-height: 25px!important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #toolbar1  #span_recherche {
+		visibility:hidden;
+    }
+}
+
+

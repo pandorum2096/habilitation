@@ -1,0 +1,96 @@
+body.tpl_creation_aaa .titrepage,
+body.tpl_recherche_fiche_aaa .titrepage,
+body.tpl_consultation_aaa .titrepage {
+  color: #A0006E;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+body.tpl_creation_bbb .titrepage,
+body.tpl_recherche_fiche_bbb .titrepage,
+body.tpl_consultation_bbb .titrepage {
+  color: #FF7D00;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+body.tpl_creation_aaa .labelChampType {
+  color: green;
+  text-align: left;
+  vertical-align: top;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+body.tpl_recherche_fiche_ipo #ONGLET_0 div.ligne-de-groupes:nth-child(2) label.labelObligatoireType,
+body.tpl_consultation_ipo #ONGLET_0 div.ligne-de-groupes:nth-child(2) label.labelObligatoireType,
+body.tpl_recherche_fiche_ipo #ONGLET_0 div.ligne-de-groupes:nth-child(2) label.labelChampType,
+body.tpl_consultation_ipo #ONGLET_0 div.ligne-de-groupes:nth-child(2) label.labelChampType {
+  display: inline-table;
+  margin-top: 2px;
+  width: 110px;
+}
+body.tpl_creation_ipo #ONGLET_0 div.ligne-de-groupes:nth-child(-n + 2) label.labelObligatoireType,
+body.tpl_creation_ipo #ONGLET_0 div.ligne-de-groupes:nth-child(-n + 2) label.labelChampType {
+  display: inline-table;
+  margin-top: 2px;
+  width: 110px;
+}
+/* ------------ */
+/* Exemple placement side by side     */
+/* ------------ */
+/* exemple on Edge, Firefox, Chrome 
+   No need to specify which div is concerned with magic rules auto-fit and minmax 
+   Il one div, it takes 100% of line, if 2 div, the width is diveded by 2.
+   Adaptable if min constraint is not respected 
+*/
+body.tpl_recherche_fiche_pal #ONGLET_0 div.ligne-de-groupes,
+body.tpl_creation_pal #ONGLET_0 div.ligne-de-groupes,
+body.tpl_consultation_pal #ONGLET_0 div.ligne-de-groupes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+body.tpl_recherche_fiche_pal div.groupe,
+body.tpl_creation_pal div.groupe,
+body.tpl_consultation_pal div.groupe {
+  /* heigth is calculated excluding margin */
+  height: calc(100% - 2em);
+  /* size is calculated including padding */
+  box-sizing: border-box;
+}
+/* exemple with IE11 
+   Must specify which div is concerned and numbers of cells for a line 
+*/
+body.tpl_recherche_fiche_oi #ONGLET_0 div.ligne-de-groupes:nth-child(1),
+body.tpl_creation_oi #ONGLET_0 div.ligne-de-groupes:nth-child(1),
+body.tpl_consultation_oi #ONGLET_0 div.ligne-de-groupes:nth-child(1),
+body.tpl_recherche_fiche_oi #ONGLET_0 div.ligne-de-groupes:nth-child(2),
+body.tpl_creation_oi #ONGLET_0 div.ligne-de-groupes:nth-child(2),
+body.tpl_consultation_oi #ONGLET_0 div.ligne-de-groupes:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr;
+}
+body.tpl_recherche_fiche_oi div.groupe,
+body.tpl_creation_oi div.groupe,
+body.tpl_consultation_oi div.groupe {
+  /* heigth is calculated excluding margin */
+  height: calc(100% - 2em);
+  /* size is calculated including padding */
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body.tpl_recherche_fiche_oi .ligne-de-groupes section:nth-child(1),
+body.tpl_creation_oi .ligne-de-groupes section:nth-child(1),
+body.tpl_consultation_oi .ligne-de-groupes section:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+}
+body.tpl_recherche_fiche_oi .ligne-de-groupes section:nth-child(2),
+body.tpl_creation_oi .ligne-de-groupes section:nth-child(2),
+body.tpl_consultation_oi .ligne-de-groupes section:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-row: 1;
+}
