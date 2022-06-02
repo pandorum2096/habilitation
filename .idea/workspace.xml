@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ac75a148-b6ba-49c6-84f6-1c214d4ec05e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/habilitation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/habilitation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfilsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfilsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Profils.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Profils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -131,8 +155,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -154,29 +180,55 @@
       <option name="presentableId" value="Default" />
       <updated>1653907292097</updated>
       <workItem from="1653907300114" duration="10171000" />
-      <workItem from="1654181436542" duration="265000" />
+      <workItem from="1654181436542" duration="1373000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state width="768" height="220" key="GridCell.Tab.0.bottom" timestamp="1653919371368">
+    <state width="1537" height="220" key="GridCell.Tab.0.bottom" timestamp="1654182088164">
       <screen x="0" y="0" width="1536" height="832" />
     </state>
-    <state width="768" height="220" key="GridCell.Tab.0.bottom/0.0.1536.832@0.0.1536.832" timestamp="1653919371368" />
-    <state width="768" height="220" key="GridCell.Tab.0.center" timestamp="1653919371368">
+    <state width="1537" height="220" key="GridCell.Tab.0.bottom/0.0.1536.832@0.0.1536.832" timestamp="1654182088164" />
+    <state width="1537" height="220" key="GridCell.Tab.0.center" timestamp="1654182088163">
       <screen x="0" y="0" width="1536" height="832" />
     </state>
-    <state width="768" height="220" key="GridCell.Tab.0.center/0.0.1536.832@0.0.1536.832" timestamp="1653919371368" />
-    <state width="768" height="220" key="GridCell.Tab.0.left" timestamp="1653919371367">
+    <state width="1537" height="220" key="GridCell.Tab.0.center/0.0.1536.832@0.0.1536.832" timestamp="1654182088163" />
+    <state width="1537" height="220" key="GridCell.Tab.0.left" timestamp="1654182088162">
       <screen x="0" y="0" width="1536" height="832" />
     </state>
-    <state width="768" height="220" key="GridCell.Tab.0.left/0.0.1536.832@0.0.1536.832" timestamp="1653919371367" />
-    <state width="768" height="220" key="GridCell.Tab.0.right" timestamp="1653919371368">
+    <state width="1537" height="220" key="GridCell.Tab.0.left/0.0.1536.832@0.0.1536.832" timestamp="1654182088162" />
+    <state width="1537" height="220" key="GridCell.Tab.0.right" timestamp="1654182088164">
       <screen x="0" y="0" width="1536" height="832" />
     </state>
-    <state width="768" height="220" key="GridCell.Tab.0.right/0.0.1536.832@0.0.1536.832" timestamp="1653919371368" />
+    <state width="1537" height="220" key="GridCell.Tab.0.right/0.0.1536.832@0.0.1536.832" timestamp="1654182088164" />
+    <state x="536" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1654182848590">
+      <screen x="0" y="0" width="1536" height="832" />
+    </state>
+    <state x="536" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.832@0.0.1536.832" timestamp="1654182848590" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
