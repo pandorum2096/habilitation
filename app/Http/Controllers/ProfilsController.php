@@ -14,8 +14,8 @@ class ProfilsController extends Controller
      */
     public function index()
     {
-        //$profils = Profils::where("statut","=",1)->get();
-        return view('profil.index');
+        $profils = Profils::where("statut","=",1)->get();
+        return view('profil.index')->with("profils", $profils);
     }
 
     /**
