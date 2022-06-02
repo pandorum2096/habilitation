@@ -19,7 +19,7 @@
                 <input type="text" name="libelle" class="form-control" placeholder="Entrer libellé du profil">
                 <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
             </div>
-       
+
     </div>
     <div class="table-responsive card">
         <table class="table table-striped custom-table">
@@ -27,81 +27,31 @@
                 <tr>
                     <th>Menu</th>
                     <th class="text-center">Tous</th>
-                    <th class="text-center">Voir</th>
-                    <th class="text-center">Ajouter</th>
-                    <th class="text-center">Modifier</th>
-                    <th class="text-center">Activer/Desactiver</th>
-                    <th class="text-center">Importer</th>
-                    <th class="text-center">Exporter</th>
-                    <th class="text-center">Valider</th>
-                    <th class="text-center">Refuser</th>
+                    @foreach ($actions as $action)
+                    <th class="text-center">{{$action->libelle}}</th>
+                    @endforeach
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Achat</td>
+                @foreach ($menus as $menu)
+                <tr id="{{$menu->id}}">
+                    <td>{{$menu->libelle}}</td>
+                    <td><input  type="checkbox"></td>
+                    @foreach ($actions as $action)
                     <td class="text-center">
-                        <input type="checkbox">
+                        @if($action->libelle=="Voir")
+                        <input type="checkbox" onclick="actived(this)" @if($action->action_id != null && $action->menu_id != $menu->id) checked @endif class="Voir" name="{{$menu->id.'|'.$action->id}}" >
+                        @else
+                        <input type="checkbox" @if($action->action_id != null && $action->menu_id != $menu->id) checked @endif name="{{$menu->id.'|'.$action->id}}" @if($action->action_id == null && $action->menu_id == null) disabled @endif >
+                        @endif
                     </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
+                    @endforeach
                 </tr>
-                <tr>
-                    <td>Finance</td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox">
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
-    <div class="d-flex justify-content-center"> 
+    <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Valider</button>
         <a href="{{route('profil.index')}}" class="btn btn-light-primary font-weight-bolder px-8 py-4 my-3 font-size-lg">
             <span class="svg-icon svg-icon-md">
@@ -126,7 +76,7 @@
             }
         } else {
             for (let i = 0; i < old.children.length; i++) {
-                if (old.children[i].className != "voir") {
+                if (old.children[i].className != "Voir") {
                     old.children[i].disabled = true;
                     old.children[i].checked = false;
                 }
@@ -138,7 +88,7 @@
         onload(elt);
     }
 
-    const oldevoir = document.querySelectorAll("input[class='" + "voir" + "']:checked");
+    const oldevoir = document.querySelectorAll("input[class='" + "Voir" + "']:checked");
     console.log("object", oldevoir);
     for (let i = 0; i < oldevoir.length; i++) {
         onload(oldevoir[i]);

@@ -39,16 +39,39 @@ class HomeController extends Controller
         $profil->code = $request->code;
         $profil->libelle = $request->libelle;
         $profil->statut = true;
-        $profil->save();
-
+        $profil->save(); 
         $idProfil = $profil->id;
 
-        return view("profil.index");
+        $menus = Menus::where('statut', true)->get();
+        $actions = Action::where('statut', true)->get(); 
+        
+		foreach($menus as $menu) {  
+            
+            if (is_array($actions) || is_object($actions))
+            {
+                foreach($actions as $action)
+                {      
+                    dd($request->input('menu.id'));
+                    if($menu->id .'|'. $action->id == $request[$menu->id .'|'. $action->id]){   
+                        Permission::created([
+                            'menu_id'=>$request->menu->id,
+                            'action_id'=>$request->action->id,
+                            'profil_id'=>$idProfil,
+                        ]);
+                    }
+                } 
+            }  
+		}
+
+        return redirect("/profil");
     }
 
     public function create()
     {  
-        return view("profil.store");
+        $menus = Menus::where('statut', true)->get();
+        $actions = Action::where('statut', true)->get(); 
+
+        return view("profil.store", compact('actions','menus'));
     }
 
     public function edit()
