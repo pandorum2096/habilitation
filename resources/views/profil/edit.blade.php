@@ -4,15 +4,18 @@
 <div class="container">
 <div class="d-flex justify-content-center"><h1>Modification de profil</h1></div>
 <hr/>
+    <form method="POST" action="{{route("profil.update", $profil->id)}}">
+
+      @csrf
     <div class="row">
         <div class="form-group col-6">
             <label>Code</label>
-            <input type="text" class="form-control" placeholder="Entrer code du profil" value="ADM">
+            <input type="text" readonly="true" class="form-control bg-secondary" name="code" placeholder="Entrer code du profil" value="{{$profil->code}}">
             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
         </div>
         <div class="form-group col-6">
             <label>Libellé</label>
-            <input type="text" class="form-control" placeholder="Entrer libellé du profil" value="Administrateur">
+            <input type="text" class="form-control" name="libelle" placeholder="Entrer libellé du profil" value="{{$profil->libelle}}">
             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
         </div>
     </div>
@@ -22,86 +25,46 @@
                 <tr>
                     <th>Menu</th>
                     <th class="text-center">Tous</th>
-                    <th class="text-center">Voir</th>
-                    <th class="text-center">Ajouter</th>
-                    <th class="text-center">Modifier</th>
-                    <th class="text-center">Activer/Desactiver</th>
-                    <th class="text-center">Importer</th>
-                    <th class="text-center">Exporter</th>
-                    <th class="text-center">Valider</th>
-                    <th class="text-center">Refuser</th>
+                    @foreach( $actions as $act)
+                    <th class="text-center">{{ $act->libelle }}</th>
+                    @endforeach
+
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Achat</td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Finance</td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                    <td class="text-center">
-                        <input type="checkbox" checked="">
-                    </td>
-                </tr>
+
+             @foreach($all_menus as $menu)
+            <tr>
+                <td>{{ucwords($menu->libelle)}}</td>
+                <td class="text-center">
+                    <input type="checkbox" checked="">
+                </td>
+                @foreach( $actions as $act)
+                <td class="text-center">
+                    <input type="checkbox"
+                           name="{{$menu->id.'|'.$act->id}}"
+                           @if(in_array(array($menu->id, $act->id), $p_menu_action_ids))
+                               checked=""
+                          @endif
+                    >
+                </td>
+                @endforeach
+
+            </tr>
+             @endforeach
+
+
             </tbody>
         </table>
     </div>
     <div class="d-flex justify-content-center">
-        <button type="button" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Valider</button>
+        <button type="submit" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Valider</button>
         <a href="{{route('profil.index')}}" class="btn btn-light-primary font-weight-bolder px-8 py-4 my-3 font-size-lg">
             <span class="svg-icon svg-icon-md">
             </span>Annuler</a>
     </div>
+
+    </form>
 </div>
 @endsection
 

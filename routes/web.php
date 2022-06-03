@@ -26,7 +26,8 @@ Auth::routes();
 Route::get('/profil', 'ProfilsController@index')->name('profil.index');
 Route::post('/profil/store','HomeController@store')->name('profil.store');
 Route::get('/profil/create','HomeController@create')->name('profil.create');
-Route::get('/profil/edit','HomeController@edit')->name('profil.edit');
+Route::get('/profil/edit/{id}','HomeController@edit')->name('profil.edit');
+Route::post('/profil/update/{id}','HomeController@update')->name('profil.update');
 
 Route::get('/achat','HomeController@achat')->name('achat.index');
 Route::get('/finance','HomeController@finance')->name('finance.index');
