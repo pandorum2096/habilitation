@@ -29,12 +29,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-        
+
+
     }
 
     public function store(Request $request)
-    { 
+    {
         return view("profil.store");
     }
 
@@ -46,15 +46,5 @@ class HomeController extends Controller
     public function edit()
     {
         return view("profil.edit");
-    }
-
-    public function achat()
-    {
-        return view("achat.index");
-    }
-
-    public function finance()
-    {
-        return view("finance.index");
     }
 }

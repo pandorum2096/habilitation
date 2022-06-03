@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Menus;
+use App\Permission;
+use App\Action;
 use Illuminate\Http\Request;
+use Auth;
 
 class MenusController extends Controller
 {
@@ -80,6 +83,42 @@ class MenusController extends Controller
      */
     public function destroy(Menus $menus)
     {
-        //
+
+    }
+
+    public function achat()
+    {
+        $user = Auth::user()->profil_id;
+
+        $permissions = Permission::join('menuses', 'menuses.id', 'permissions.menu_id')
+                                    ->join('actions', 'actions.id', 'permissions.action_id')
+                                    ->where('menuses.libelle','Achat')->where('permissions.profil_id', $user)
+                                    ->select('actions.*')->orderBy("actions.position")->get();
+
+        return view("achat.index", compact('permissions'));
+    }
+
+    public function finance()
+    {
+        $user = Auth::user()->profil_id;
+
+        $permissions = Permission::join('menuses', 'menuses.id', 'permissions.menu_id')
+                                    ->join('actions', 'actions.id', 'permissions.action_id')
+                                    ->where('menuses.libelle','Finance')->where('permissions.profil_id', $user)
+                                    ->select('actions.*')->orderBy("actions.position")->get();
+
+        return view("finance.index", compact('permissions'));
+    }
+
+    public function commercial()
+    {
+        $user = Auth::user()->profil_id;
+
+        $permissions = Permission::join('menuses', 'menuses.id', 'permissions.menu_id')
+                                    ->join('actions', 'actions.id', 'permissions.action_id')
+                                    ->where('menuses.libelle','Commercial')->where('permissions.profil_id', $user)
+                                    ->select('actions.*')->orderBy("actions.position")->get();
+
+        return view("commercial.index", compact('permissions'));
     }
 }

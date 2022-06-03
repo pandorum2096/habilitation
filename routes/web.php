@@ -28,6 +28,6 @@ Route::post('/profil/store','HomeController@store')->name('profil.store');
 Route::get('/profil/create','HomeController@create')->name('profil.create');
 Route::get('/profil/edit','HomeController@edit')->name('profil.edit');
 
-Route::get('/achat','HomeController@achat')->name('achat.index');
-Route::get('/finance','HomeController@finance')->name('finance.index');
-Route::get('/commercial','HomeController@commercial')->name('commercial.index');
+Route::get('/achat','menusController@achat')->name('achat.index');
+Route::get('/finance','menusController@finance')->name('finance.index');
+Route::get('/commercial','menusController@commercial')->name('commercial.index');
