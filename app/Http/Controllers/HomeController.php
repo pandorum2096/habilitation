@@ -48,13 +48,11 @@ class HomeController extends Controller
     public function edit($id=null)
     {
         $profil = DB::table('profils')->find($id);
-
         $actions=DB::table('actions')->orderBy('position')->get();
         $all_menus=DB::table('menuses')->orderBy('position')->get();
-
         $p_menus_actions=DB::table('permissions')->where('profil_id','=',$id)->get();
-
         $p_menu_action_ids=[];
+
         foreach($p_menus_actions as $act){
             $p_menu_action_ids[]=[$act->menu_id,$act->action_id];
         }
@@ -65,10 +63,8 @@ class HomeController extends Controller
 
 
         $profil = DB::table('profils')->find($id);
-
         $actions=DB::table('actions')->orderBy('position')->get();
         $all_menus=DB::table('menuses')->orderBy('position')->get();
-
         $permissions = Permission::where("profil_id","=",$id)->get();
         foreach ($permissions as $key => $permission) {
             $permission->delete();
@@ -90,7 +86,7 @@ class HomeController extends Controller
 
 
 
-        return redirect()->back();
+        return redirect("/profil");
     }
 
     public function achat()
