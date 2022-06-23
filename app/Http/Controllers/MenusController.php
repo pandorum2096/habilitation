@@ -92,7 +92,7 @@ class MenusController extends Controller
 
         $permissions = Permission::join('menuses', 'menuses.id', 'permissions.menu_id')
                                     ->join('actions', 'actions.id', 'permissions.action_id')
-                                    ->where('menuses.libelle','Achat')->where('permissions.profil_id', $user)
+                                    ->where('menuses.code','Achat')->where('profil_id', $user)
                                     ->select('actions.*')->orderBy("actions.position")->get();
 
         return view("achat.index", compact('permissions'));
@@ -104,7 +104,7 @@ class MenusController extends Controller
 
         $permissions = Permission::join('menuses', 'menuses.id', 'permissions.menu_id')
                                     ->join('actions', 'actions.id', 'permissions.action_id')
-                                    ->where('menuses.libelle','Finance')->where('permissions.profil_id', $user)
+                                    ->where('menuses.code','Finance')->where('profil_id', $user)
                                     ->select('actions.*')->orderBy("actions.position")->get();
 
         return view("finance.index", compact('permissions'));
@@ -116,7 +116,7 @@ class MenusController extends Controller
 
         $permissions = Permission::join('menuses', 'menuses.id', 'permissions.menu_id')
                                     ->join('actions', 'actions.id', 'permissions.action_id')
-                                    ->where('menuses.libelle','Commercial')->where('permissions.profil_id', $user)
+                                    ->where('menuses.code','Commercial')->where('profil_id', $user)
                                     ->select('actions.*')->orderBy("actions.position")->get();
 
         return view("commercial.index", compact('permissions'));
